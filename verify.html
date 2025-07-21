@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Verify Face</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
+    video { width: 320px; height: 240px; border: 1px solid #ccc; }
+    button { margin-top: 15px; padding: 10px; font-size: 16px; }
+    #status { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Verify Face to Autofill KYC</h2>
+  <video id="video" autoplay muted></video><br>
+  <button id="verify">Verify Face</button>
+  <p id="status">Loading models...</p>
+
+  <!-- Scripts -->
+  <script src="libs/face-api.min.js"></script>
+  <script src="verify.js"></script>
+</body>
+</html>

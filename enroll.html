@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Enroll Face and Upload Aadhaar</title>
+
+  <!-- ✅ Load all scripts locally to avoid CSP errors -->
+  <script src="libs/face-api.min.js"></script>
+  <script src="libs/pdf.min.js"></script>         <!-- Was CDN -->
+  <script src="libs/tesseract.min.js"></script>   <!-- Was CDN -->
+
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 30px; }
+    video { width: 320px; height: 240px; border: 1px solid #ccc; }
+    button, input { margin-top: 15px; padding: 10px; font-size: 16px; }
+    #status, #pdf-status { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Enroll Face & Upload Aadhaar</h2>
+
+  <!-- 🎥 Face Camera -->
+  <video id="video" autoplay muted></video><br>
+  <button id="capture">Capture Face</button><br>
+
+  <!-- 📎 Aadhaar PDF Upload -->
+  <input type="file" id="aadhaarPdf" accept=".pdf" />
+
+  <!-- ℹ️ Status Feedback -->
+  <p id="status">Loading models...</p>
+  <p id="pdf-status"></p>
+
+  <!-- 🚀 Main Enroll Script -->
+  <script src="enroll.js"></script>
+</body>
+</html>
